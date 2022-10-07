@@ -1,0 +1,18 @@
+.header {
+    background: red;
+    height: 60px;
+    width: 100%;
+    background: #FFFFFF;
+    border-bottom: 2px solid #E6E6E6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.elem-container {
+    height: 60px;
+    width: 90%;
+    background: rgb(199, 167, 167);
+    display: flex;
+    align-items: center;
+}

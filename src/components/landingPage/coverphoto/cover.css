@@ -1,0 +1,11 @@
+.cover-photo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cover-photo-container>img {
+    height: 100%;
+    width: 90%;
+    border-radius: 5px;
+}

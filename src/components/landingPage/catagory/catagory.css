@@ -1,0 +1,10 @@
+.catagory-container {
+    width: 90%;
+}
+
+.catagory-div {
+    height: 250px;
+    width: 100%;
+    background: rgb(178, 178, 201);
+    border-radius: 5px
+}
