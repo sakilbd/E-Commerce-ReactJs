@@ -3,3 +3,33 @@
     align-items: center;
     justify-content: center;
 }
+
+.flex-container {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 1%;
+    width: 100%;
+}
+
+.left-banner,
+.right-banner {
+    height: 100%;
+    width: 100%;
+    background: rgb(28, 118, 141);
+    border-radius: 5px;
+}
+
+.left-banner {
+    background: #CBEFFB;
+}
+
+.right-banner {
+    background: #FFEC79
+}
+
+.master-container {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
