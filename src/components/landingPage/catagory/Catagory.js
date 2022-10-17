@@ -12,7 +12,7 @@ function Catagory() {
     axios
       .get("https://634d1ec9f5d2cc648e9cf4b1.mockapi.io/api/catagory/products")
       .then((response) => {
-       c(response.data)
+        c(response.data);
         setCatagory(response.data);
 
         // Code for handling the response
@@ -28,12 +28,14 @@ function Catagory() {
       <div>
         <h3>Shop By Catagory</h3>
         <div className="catagory-div">
-        {Object.keys(catagory).map((item,i) => {
-          return <CatagoryCard object={catagory[i]} />
-        })}
-          
+          {Object.keys(catagory).map((item, i) => {
+            return (
+              <div class="catagory-card">
+                <CatagoryCard object={catagory[i]} />
+              </div>
+            );
+          })}
         </div>
-        
       </div>
     </div>
   );

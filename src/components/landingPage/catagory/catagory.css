@@ -1,10 +1,42 @@
 .catagory-container {
     width: 90%;
+    -webkit-overflow-scrolling: touch;
 }
 
 .catagory-div {
     height: 250px;
     width: 100%;
     background: rgb(178, 178, 201);
-    border-radius: 5px
+    border-radius: 5px;
+    display: flex;
+    overflow-x: scroll;
+}
+
+::-webkit-scrollbar {
+    display: none;
+    /* hides overflow-x scrollbar */
+}
+
+.catagory-card {
+    /* border: 2px solid red !important; */
+    display: flex;
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.catagory-content {
+    width: 200px !important;
+    /* padding-left: 10px;
+    padding-top: 10px; */
+    border: 2px solid black;
+    /* background: skyblue; */
+    padding: 5px;
+    background: rgb(235, 135, 145);
+    border-radius: 5px;
+}
+
+.catagory-content>img {
+    width: 100%;
+    /* padding: 5px; */
 }
