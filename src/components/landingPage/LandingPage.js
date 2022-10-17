@@ -7,16 +7,16 @@ import Banner from "./Banner";
 function LandingPage() {
   return (
     <div>
-      <HeaderComp />
+      {/* <HeaderComp />
       <div className="component" style={{ "padding-top": "1%" }}>
         <CoverPhoto/>
-      </div>
+      </div> */}
       <div className="component" style={{ "padding-top": "1%" }}>
         <Catagory/>
       </div>
-      <div className="component" style={{ "padding-top": "1%" }}>
+      {/* <div className="component" style={{ "padding-top": "1%" }}>
         <Banner/>
-      </div>
+      </div> */}
     </div>
   );
 }
