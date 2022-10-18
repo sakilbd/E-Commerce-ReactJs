@@ -1,8 +1,11 @@
 .item-card-container {
     /* background: rgb(232, 14, 14); */
     padding: 10px;
-    border-radius: 10px;
+    border-radius: 8px;
     border: 1px solid rgba(115, 102, 102, 0.174);
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
 }
 
 
@@ -27,4 +30,54 @@
     /* font-size: 10px; */
     height: 100%;
     margin-top: 5px;
+}
+
+.price {
+    font-weight: bold;
+}
+
+.weight {
+    font-weight: bold;
+    opacity: 0.5;
+}
+
+.add-button {
+    width: 100%;
+    border-radius: 5px;
+    padding: 3px;
+    border: 1px solid transparent;
+}
+
+.add-button:hover {
+    border: 1px solid rgba(114, 108, 108, 0.77);
+}
+
+.increment-button {
+    width: 100%;
+    /* height: 35px; */
+    display: flex;
+    justify-content: space-between;
+    padding: 3px;
+    border: 1px solid rgba(114, 108, 108, 0.77);
+    border-radius: 5px;
+    background: rgba(210, 152, 152, 0.818);
+}
+
+.count-buttons {
+    border: none;
+    /* height: 27px;
+    width: 27px; */
+    /* height: 27px;
+    width: 27px; */
+    border-radius: 90%;
+    font-size: 15px;
+    font-weight: bold;
+    background: transparent;
+    /* border: 1px solid rgba(0, 0, 0, 0.168); */
+}
+
+.increment-button-container {
+    /* width: 600px;
+    background: red; */
+    display: none;
 }
