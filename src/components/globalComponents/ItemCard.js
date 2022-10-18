@@ -21,7 +21,7 @@ function ItemCard() {
   }
   return (
     <div className="item-card-container">
-      <div>badge</div>
+      <div className="badge"><span>-12%</span></div>
       <div className="image-container">
         <img src="http://loremflickr.com/640/480/food"></img>
       </div>

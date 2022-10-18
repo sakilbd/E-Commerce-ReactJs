@@ -16,7 +16,10 @@
 } */
 
 .image-container>img {
-    max-width: 200px;
+    max-width: 250px;
+    max-height: 150px;
+    border-radius: 5px;
+    overflow: hidden
 }
 
 .rating {
@@ -99,4 +102,15 @@
     font-size: 13px;
     opacity: .6;
     text-decoration: line-through;
+}
+
+.badge {
+    margin-left: 10px;
+    margin-top: 10px;
+    position: fixed;
+    padding: 200px;
+    background: rgb(187, 18, 18);
+    color: white;
+    font-weight: 100;
+    font-size: 25px;
 }
