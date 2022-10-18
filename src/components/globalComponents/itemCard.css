@@ -1,0 +1,29 @@
+.item-card-container {
+    /* background: rgb(232, 14, 14); */
+    padding: 10px;
+    border-radius: 10px;
+}
+
+
+/* .image-container {
+    width: 250px;
+    padding: 5px;
+} */
+
+.image-container>img {
+    max-width: 200px;
+}
+
+.rating {
+    display: flex;
+    gap: 10px;
+    font-weight: bold;
+    /* background: red; */
+}
+
+.star-value {
+    /* background: green; */
+    /* font-size: 10px; */
+    height: 100%;
+    margin-top: 5px;
+}

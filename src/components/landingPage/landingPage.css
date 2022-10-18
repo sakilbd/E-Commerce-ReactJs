@@ -13,10 +13,15 @@
 
 .left-banner,
 .right-banner {
-    height: 100%;
+    height: 500px;
     width: 100%;
     background: rgb(28, 118, 141);
     border-radius: 5px;
+}
+
+.left-banner,
+.right-banner>img {
+    max-width: 100%;
 }
 
 .left-banner {
