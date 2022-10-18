@@ -6,6 +6,7 @@
     display: flex;
     flex-direction: column;
     gap: 4px;
+    user-select: none;
 }
 
 
@@ -46,6 +47,7 @@
     border-radius: 5px;
     padding: 3px;
     border: 1px solid transparent;
+    transition: border .5s;
 }
 
 .add-button:hover {
@@ -60,7 +62,7 @@
     padding: 3px;
     border: 1px solid rgba(114, 108, 108, 0.77);
     border-radius: 5px;
-    background: rgba(210, 152, 152, 0.818);
+    transition: background .5s;
 }
 
 .count-buttons {
@@ -76,8 +78,25 @@
     /* border: 1px solid rgba(0, 0, 0, 0.168); */
 }
 
+.increment-button:hover {
+    background: rgba(195, 170, 170, 0.412);
+}
+
 .increment-button-container {
     /* width: 600px;
     background: red; */
     display: none;
+}
+
+.price-portion {
+    display: flex;
+    gap: 10px;
+    /* background: red; */
+}
+
+.previous-price {
+    margin-top: 3px;
+    font-size: 13px;
+    opacity: .6;
+    text-decoration: line-through;
 }

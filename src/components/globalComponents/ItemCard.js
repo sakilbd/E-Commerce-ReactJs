@@ -8,13 +8,13 @@ function ItemCard() {
   console.log("shit");
   function incrementCount() {
     count = count + 1;
-   
+
     setCount(count);
   }
   function decrementCount() {
     count = count - 1;
-    if(count==0){
-      setShowed(true)
+    if (count == 0) {
+      setShowed(true);
     }
 
     setCount(count);
@@ -40,20 +40,28 @@ function ItemCard() {
         {" "}
         100 <span>g</span>
       </div>
-      <div>
-        {" "}
-        ৳ <span className="price">100</span>
+      <div className="price-portion">
+        <div>
+          ৳ <span className="price">100</span>
+        </div>
+        <div className="previous-price">
+          ৳ <span className="price">120</span>
+        </div>
       </div>
       <button
-        onClick={(e) => {setShowed(false);
-          setCount(1) 
+        onClick={(e) => {
+          setShowed(false);
+          setCount(1);
         }}
         style={showed ? { display: "block" } : { display: "none" }}
         className="add-button"
       >
         Add to bag
       </button>
-      <div style={showed ? { display: "none" } : { display: "block" }} className="increment-button-container">
+      <div
+        style={showed ? { display: "none" } : { display: "block" }}
+        className="increment-button-container"
+      >
         <button className="increment-button ">
           <button className="count-buttons" onClick={decrementCount}>
             -
