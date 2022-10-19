@@ -48,12 +48,11 @@ function TrendingProducts() {
         </div>
       </div>
       <div
-        style={loading ? { display: "block" } : { display: "block" }}
+        style={loading ? { display: "block" } : { display: "none" }}
         className="loading-container"
       >
-      
-          {" "}
-          {[...Array(5)].map((item) => {
+        <div className="loading-flex-container">
+          {[...Array(6)].map((item) => {
             return (
               <div className="loading-card">
                 <div className="loading-iamge"></div>
@@ -62,7 +61,7 @@ function TrendingProducts() {
               </div>
             );
           })}
-      
+        </div>
       </div>
     </div>
   );
