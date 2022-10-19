@@ -1,0 +1,11 @@
+.trending-container {
+    width: 90%;
+    overflow: scroll;
+}
+
+.card-container {
+    display: flex;
+    /* overflow-x: scroll; */
+    gap: 10px;
+    justify-content: space-between;
+}

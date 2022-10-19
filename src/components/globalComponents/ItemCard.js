@@ -1,11 +1,15 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import "./itemCard.css";
 import StarRatings from "react-star-ratings";
 
-function ItemCard() {
+function ItemCard(props) {
+  // console.log(props.data)
+  let [itemData,setItemData]=useState({});
+
+  let [rating,setRating]=useState();
   let [count, setCount] = useState(0);
   const [showed, setShowed] = useState(true);
-  console.log("shit");
+  // console.log("shit");
   function incrementCount() {
     count = count + 1;
 
@@ -19,33 +23,41 @@ function ItemCard() {
 
     setCount(count);
   }
+
+  useEffect(() => {
+    setRating(parseFloat(props.data.rating))
+    setItemData(props.data);
+  
+  }, [props.data])
+  
   return (
     <div className="item-card-container">
-      <div className="badge"><span>-12%</span></div>
+     
       <div className="image-container">
+      <div className="badge"><span>-12%</span></div>
         <img src="http://loremflickr.com/640/480/food"></img>
       </div>
 
-      <div>Page Title</div>
+      <div>{itemData.title}</div>
       <div className="rating">
         <StarRatings
           starRatedColor="#d6d324"
-          rating={4.5}
+          rating={rating}
           starDimension="20px"
           starSpacing="0px"
         />
-        <div className="star-value">4.5</div>
+        <div className="star-value">{rating}</div>
       </div>
       <div className="weight">
         {" "}
-        100 <span>g</span>
+        {itemData.quantity}<span>{itemData.unit}</span>
       </div>
       <div className="price-portion">
         <div>
-          ৳ <span className="price">100</span>
+          ৳ <span className="price">{itemData.price}</span>
         </div>
         <div className="previous-price">
-          ৳ <span className="price">120</span>
+          ৳ <span className="price">{itemData.last_price}</span>
         </div>
       </div>
       <button
