@@ -11,16 +11,56 @@
     justify-content: space-between;
 }
 
+
+/* loading styles  */
+
 .loading-container {
     background: green;
-    height: 332px;
+    height: 305px;
     z-index: 1;
-    background: linear-gradient(90deg, transparent, rgb(0, 0, 0), transparent);
+    /* background: linear-gradient(90deg, transparent, rgb(0, 0, 0), transparent); */
     animation: loading 0.8s infinite;
+    border-radius: 5px;
+    padding-right: 10px;
+    display: flex;
 }
 
 @keyframes loading {
     100% {
-        transform: translateX(100%);
+        /* transform: translateX(100%); */
     }
+}
+
+.loading-card {
+    height: 100%;
+    padding: 10px;
+    width: 210px;
+    background: rgba(129, 127, 127, 0.829);
+    border-radius: 5px;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+
+.loading-iamge {
+    height: 50%;
+    width: 100%;
+    background: lightgray;
+    border-radius: 5px
+}
+
+.loading-title {
+    height: 30px;
+    width: 100%;
+    background: lightgray;
+    padding-top: 15px;
+    border-radius: 5px;
+}
+
+.loading-title-2 {
+    height: 30px;
+    width: 60%;
+    background: lightgray;
+    padding-top: 15px;
+    border-radius: 5px;
 }

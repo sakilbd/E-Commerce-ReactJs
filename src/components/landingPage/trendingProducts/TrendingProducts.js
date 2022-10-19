@@ -47,11 +47,22 @@ function TrendingProducts() {
           })}
         </div>
       </div>
-      <div style={loading ? { display: "block" } : { display: "none" }} className="loading-container">
-        <div className="loading-card">
-          <div className="loading-iamge"></div>
-
-        </div>
+      <div
+        style={loading ? { display: "block" } : { display: "block" }}
+        className="loading-container"
+      >
+      
+          {" "}
+          {[...Array(5)].map((item) => {
+            return (
+              <div className="loading-card">
+                <div className="loading-iamge"></div>
+                <div className="loading-title"></div>
+                <div className="loading-title-2"></div>
+              </div>
+            );
+          })}
+      
       </div>
     </div>
   );
