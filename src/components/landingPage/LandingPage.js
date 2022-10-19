@@ -2,13 +2,13 @@ import React from "react";
 import HeaderComp from "./header/HeaderComp";
 import CoverPhoto from "./coverphoto/CoverPhoto";
 import Catagory from "./catagory/Catagory";
-import './landingPage.css'
+import "./landingPage.css";
 import Banner from "./Banner";
 import TrendingProducts from "./trendingProducts/TrendingProducts";
 function LandingPage() {
   return (
     <div className="page-container">
-      {/* <HeaderComp />
+      <HeaderComp />
       <div className="component" style={{ "padding-top": "1%" }}>
         <CoverPhoto/>
       </div>
@@ -17,9 +17,11 @@ function LandingPage() {
       </div>
       <div className="component" style={{ "padding-top": "1%" }}>
         <Banner/>
-      </div> */}
+      </div>
       <div className="component" style={{ "padding-top": "1%" }}>
-        <TrendingProducts/>
+        
+          <TrendingProducts />
+      
       </div>
     </div>
   );

@@ -5,6 +5,7 @@ import "./trending_products.css";
 
 function TrendingProducts() {
   let [data, setData] = useState({});
+  let [loading, setLoading] = useState(true);
   // useEffect(() => {
   //   fetch("/fakeData/products.json")
   //     .then((r) => r.text())
@@ -31,15 +32,26 @@ function TrendingProducts() {
 
   return (
     <div className="trending-container">
-      Trending Products
-      <div className="card-container">
-        {Object.keys(data).map((item, i) => {
-          return (
-            <div className="product-card">
-              <ItemCard data={data[item]}/>
-            </div>
-          );
-        })}
+      <div
+        style={loading ? { display: "none" } : { display: "block" }}
+        className=""
+      >
+        Trending Products
+        <div onLoad={() => setLoading(false)} className="card-container">
+          {Object.keys(data).map((item, i) => {
+            return (
+              <div className="product-card">
+                <ItemCard data={data[item]} />
+              </div>
+            );
+          })}
+        </div>
+      </div>
+      <div style={loading ? { display: "block" } : { display: "none" }} className="loading-container">
+        <div className="loading-card">
+          <div className="loading-iamge"></div>
+
+        </div>
       </div>
     </div>
   );

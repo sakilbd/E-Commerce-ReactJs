@@ -1,6 +1,7 @@
 .trending-container {
     width: 90%;
     overflow: scroll;
+    /* background: red; */
 }
 
 .card-container {
@@ -8,4 +9,18 @@
     /* overflow-x: scroll; */
     gap: 10px;
     justify-content: space-between;
+}
+
+.loading-container {
+    background: green;
+    height: 332px;
+    z-index: 1;
+    background: linear-gradient(90deg, transparent, rgb(0, 0, 0), transparent);
+    animation: loading 0.8s infinite;
+}
+
+@keyframes loading {
+    100% {
+        transform: translateX(100%);
+    }
 }
