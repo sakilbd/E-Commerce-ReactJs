@@ -28,7 +28,7 @@ var array_of = function(times) {
 };
 
 // Will generate array of five random timestamps
-var data = array_of(5);
+var data = array_of(1);
 console.log(data)
 fs.writeFile("./faker/db.json", JSON.stringify(data), function(err) {
     if (err) throw err;
