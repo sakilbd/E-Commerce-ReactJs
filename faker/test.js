@@ -11,11 +11,24 @@ var array_of = function(times) {
 
     for (var i = 0; i < times; ++i) {
         casual.define('user', function() {
+            var units = [
+                'g',
+                'pc',
+                'kg',
+                'lb'
+
+            ]
+            let price = casual.integer(from = 20, to = 350);
             return {
-                email: casual.email,
-                firstname: casual.first_name,
-                lastname: casual.last_name,
-                password: casual.password
+                title: casual.words(n = 6),
+                image: "http://loremflickr.com/640/480/food",
+                rating: (casual.double(from = 3, to = 5)).toFixed(2),
+                quantity: casual.integer(from = 1, to = 100),
+                unit: units[Math.floor(Math.random() * units.length)],
+                price: price,
+                last_price: price + casual.integer(from = 10, to = 20),
+                stock: casual.integer(from = 4, to = 9),
+
             };
         });
 
@@ -28,9 +41,14 @@ var array_of = function(times) {
 };
 
 // Will generate array of five random timestamps
-var data = array_of(1);
+var data = array_of(10);
 console.log(data)
-fs.writeFile("./faker/db.json", JSON.stringify(data), function(err) {
+    // fs.writeFile("./faker/db.json", JSON.stringify(data), function(err) {
+    //     if (err) throw err;
+    //     console.log('complete');
+    // });
+
+fs.writeFile("./public/fakeData/products.json", JSON.stringify(data), function(err) {
     if (err) throw err;
     console.log('complete');
 });
