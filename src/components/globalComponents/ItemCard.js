@@ -1,12 +1,12 @@
-import React, { useState,useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import "./itemCard.css";
 import StarRatings from "react-star-ratings";
 
 function ItemCard(props) {
   // console.log(props.data)
-  let [itemData,setItemData]=useState({});
+  let [itemData, setItemData] = useState({});
 
-  let [rating,setRating]=useState();
+  let [rating, setRating] = useState();
   let [count, setCount] = useState(0);
   const [showed, setShowed] = useState(true);
   // console.log("shit");
@@ -25,20 +25,22 @@ function ItemCard(props) {
   }
 
   useEffect(() => {
-    setRating(parseFloat(props.data.rating))
+    setRating(parseFloat(props.data.rating));
     setItemData(props.data);
-  
-  }, [props.data])
-  
+  }, [props.data]);
+
   return (
     <div className="item-card-container">
-     
       <div className="image-container">
-      <div className="badge"><span>-12%</span></div>
+        <div className="badge">
+          <span>-12%</span>
+        </div>
         <img src="http://loremflickr.com/640/480/food"></img>
       </div>
 
-      <div>{itemData.title}</div>
+      <div className="title-container" >
+        <h6 className="title"> {itemData.title}</h6>
+      </div>
       <div className="rating">
         <StarRatings
           starRatedColor="#d6d324"
@@ -50,7 +52,8 @@ function ItemCard(props) {
       </div>
       <div className="weight">
         {" "}
-        {itemData.quantity}<span>{itemData.unit}</span>
+        {itemData.quantity}
+        <span>{itemData.unit}</span>
       </div>
       <div className="price-portion">
         <div>

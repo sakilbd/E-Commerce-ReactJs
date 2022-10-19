@@ -6,7 +6,7 @@
     display: flex;
     flex-direction: column;
     gap: 4px;
-    user-select: none;
+    /* user-select: none; */
 }
 
 
@@ -121,4 +121,23 @@
     font-size: 25px;
     width: 45px;
     z-index: 1;
+}
+
+.title {
+    /* overflow: hidden; */
+    /* text-overflow: ellipsis; */
+    /* display: none; */
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    /* width: 150px; */
+}
+
+.title-container {
+    width: 190px;
+}
+
+.title:hover {
+    overflow: visible;
+    white-space: normal;
 }

@@ -8,7 +8,7 @@ import TrendingProducts from "./trendingProducts/TrendingProducts";
 function LandingPage() {
   return (
     <div className="page-container">
-      <HeaderComp />
+      {/* <HeaderComp />
       <div className="component" style={{ "padding-top": "1%" }}>
         <CoverPhoto/>
       </div>
@@ -17,7 +17,7 @@ function LandingPage() {
       </div>
       <div className="component" style={{ "padding-top": "1%" }}>
         <Banner/>
-      </div>
+      </div> */}
       <div className="component" style={{ "padding-top": "1%" }}>
         <TrendingProducts/>
       </div>
