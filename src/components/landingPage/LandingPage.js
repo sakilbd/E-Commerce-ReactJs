@@ -8,17 +8,17 @@ import TrendingProducts from "./trendingProducts/TrendingProducts";
 function LandingPage() {
   return (
     <div className="page-container flex flex-col justify-center items-center   ">
-      <div className="lg:w-5/6 md:w-full  ">
-        {/* <HeaderComp />
+      <div className="lg:w-8/12 md:w-full  ">
+        <HeaderComp />
         <div className="component  " style={{ "padding-top": "1%" }}>
           <CoverPhoto />
         </div>
-        <div className="component" style={{ "padding-top": "1%" }}>
+        {/* <div className="component" style={{ "padding-top": "1%" }}>
           <Catagory />
-        </div>
+        </div> */}
         <div className="component" style={{ "padding-top": "1%" }}>
           <Banner />
-        </div> */}
+        </div>
         <div className="component" style={{ "padding-top": "1%" }}>
           <TrendingProducts />
         </div>
