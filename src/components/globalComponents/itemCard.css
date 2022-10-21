@@ -118,9 +118,12 @@
     background: rgb(187, 18, 18);
     color: white;
     font-weight: 100;
-    font-size: 25px;
+    font-size: 15px;
     width: 45px;
     z-index: 1;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
 }
 
 .title {
