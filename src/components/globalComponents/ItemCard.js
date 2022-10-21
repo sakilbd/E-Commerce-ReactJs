@@ -56,7 +56,7 @@ function ItemCard(props) {
         </div>
 
         <div className="title-container">
-          <h6 className="title"> {itemData.title}</h6>
+          <h6  className="title"> {itemData.title}</h6>
         </div>
         <div className="rating">
           <StarRatings
