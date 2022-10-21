@@ -31,18 +31,18 @@ function TrendingProducts() {
   }, []);
 
   return (
-    <div className="trending-container">
+    <div className="trending-container ">
       <div
         style={loading ? { display: "none" } : { display: "block" }}
         className=""
       >
         Trending Products
-        <div onLoad={() => setLoading(false)} className="card-container">
+        <div onLoad={() => setLoading(false)} className="grid lg:grid-cols-5 md:grid-cols-5 sm:grid-cols-2 gap-2">
           {Object.keys(data).map((item, i) => {
             return (
-              <div className="product-card">
+             
                 <ItemCard data={data[item]} />
-              </div>
+              
             );
           })}
         </div>

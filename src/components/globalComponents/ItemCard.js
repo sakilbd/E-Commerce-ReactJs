@@ -32,7 +32,7 @@ function ItemCard(props) {
   }, [props.data]);
 
   return (
-    <div>
+    
       <div
         style={loading ? { display: "none" } : { display: "block" }}
         className="item-card-container"
@@ -106,7 +106,7 @@ function ItemCard(props) {
         </div>
       </div>
       
-    </div>
+    
   );
 }
 

@@ -11,7 +11,7 @@
 
 .elem-container {
     height: 60px;
-    width: 90%;
+    /* width: 90%; */
     background: rgb(199, 167, 167);
     display: flex;
     align-items: center;
