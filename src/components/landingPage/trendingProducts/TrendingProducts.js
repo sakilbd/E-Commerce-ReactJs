@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import ItemCard from "../../globalComponents/ItemCard";
+import ItemCard from "../../globalComponents/productCard/ItemCard";
 import axios from "axios";
 import "./trending_products.css";
 

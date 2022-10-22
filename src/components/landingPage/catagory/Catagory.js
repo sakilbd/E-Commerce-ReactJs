@@ -2,6 +2,7 @@ import { React, useEffect, useState } from "react";
 import "./catagory.css";
 import axios from "axios";
 import CatagoryCard from "./CatagoryCard";
+import { Link } from "react-router-dom";
 
 function Catagory() {
   const c = console.log.bind(console);
@@ -31,7 +32,9 @@ function Catagory() {
           {Object.keys(catagory).map((item, i) => {
             return (
               <div class="catagory-card">
-                <CatagoryCard object={catagory[i]} />
+                <Link to={`products/${catagory[item].id}`}>
+                  <CatagoryCard object={catagory[i]} />
+                </Link>
               </div>
             );
           })}

@@ -1,12 +1,20 @@
 import React, { Component } from "react";
 import LandingPage from "./components/landingPage/LandingPage";
-import './AppStyle.css'
+import Products from "./components/productPage/catagorizedProduct/Products";
+
+import "./AppStyle.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <LandingPage/>
-    </div>
+    <>
+     
+        <Routes>
+          <Route path="/" element={<LandingPage />}></Route>
+          <Route path="products/:id" element={<Products/>}></Route>
+        </Routes>
+      {/* <LandingPage /> */}
+    </>
   );
 }
 
