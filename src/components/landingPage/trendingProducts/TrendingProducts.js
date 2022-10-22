@@ -37,7 +37,7 @@ function TrendingProducts() {
         className=""
       >
         Trending Products
-        <div onLoad={() => setLoading(false)} className="grid lg:grid-cols-5 md:grid-cols-5 sm:grid-cols-3 sml:grid-cols-2 gap-2">
+        <div onLoad={() => setLoading(false)} className="grid lg:grid-cols-5 md:grid-cols-4 sm:grid-cols-3 sml:grid-cols-2 gap-2">
           {Object.keys(data).map((item, i) => {
             return (
              

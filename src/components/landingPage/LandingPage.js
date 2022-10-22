@@ -13,12 +13,12 @@ function LandingPage() {
         <div className="component  " style={{ "padding-top": "1%" }}>
           <CoverPhoto />
         </div>
-        {/* <div className="component" style={{ "padding-top": "1%" }}>
+        <div className="component" style={{ "padding-top": "1%" }}>
           <Catagory />
-        </div> */}
-        {/* <div className="component" style={{ "padding-top": "1%" }}>
+        </div>
+        <div className="component" style={{ "padding-top": "1%" }}>
           <Banner />
-        </div> */}
+        </div>
         <div className="component" style={{ "padding-top": "1%" }}>
           <TrendingProducts />
         </div>

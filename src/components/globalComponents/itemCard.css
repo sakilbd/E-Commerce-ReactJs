@@ -58,10 +58,11 @@
     padding: 3px;
     border: 1px solid transparent;
     transition: border .5s;
+    border: 1px solid rgba(114, 108, 108, 0.77);
 }
 
 .add-button:hover {
-    border: 1px solid rgba(114, 108, 108, 0.77);
+    /* border: 1px solid rgba(114, 108, 108, 0.77); */
 }
 
 .increment-button {

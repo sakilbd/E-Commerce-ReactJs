@@ -55,8 +55,8 @@ function ItemCard(props) {
           /> */}
         </div>
 
-        <div className="title-container">
-          <h6  className="title"> {itemData.title}</h6>
+        <div className="max-h-[50px] min-h-[50px] sml:max-h-[40px] sml:min-h-[40px]  overflow-scroll">
+          <h6  className="mt-1 sml:text-sm "> {itemData.title}</h6>
         </div>
         <div className="rating">
           <StarRatings
@@ -64,19 +64,20 @@ function ItemCard(props) {
             rating={rating}
             starDimension="20px"
             starSpacing="0px"
+           
           />
-          <div className="star-value">{rating}</div>
+          <div className="star-value sml:text-sm">{rating}</div>
         </div>
-        <div className="weight">
+        <div className="weight sml:text-sm">
           {" "}
           {itemData.quantity}
           <span>{itemData.unit}</span>
         </div>
-        <div className="price-portion">
+        <div className="price-portion sml:text-sm">
           <div>
-            ৳ <span className="price">{itemData.price}</span>
+            ৳ <span className="price ">{itemData.price}</span>
           </div>
-          <div className="previous-price">
+          <div className="previous-price ">
             ৳ <span className="price">{itemData.last_price}</span>
           </div>
         </div>
@@ -86,7 +87,7 @@ function ItemCard(props) {
             setCount(1);
           }}
           style={showed ? { display: "block" } : { display: "none" }}
-          className="add-button"
+          className="add-button sml:text-sm"
         >
           Add to bag
         </button>
@@ -95,15 +96,16 @@ function ItemCard(props) {
           className="increment-button-container"
         >
           <button className="increment-button ">
-            <button className="count-buttons" onClick={decrementCount}>
+            <button className="count-buttons sml:text-sm" onClick={decrementCount}>
               -
             </button>
-            <div>{count}</div>
-            <button className="count-buttons" onClick={incrementCount}>
+            <div className="sml:text-sm">{count}</div>
+            <button className="count-buttons sml:text-sm" onClick={incrementCount}>
               +
             </button>
           </button>
         </div>
+        
       </div>
       
     
