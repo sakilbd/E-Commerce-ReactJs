@@ -11,3 +11,7 @@ https://github.com/zalmoxisus/redux-devtools-extension
 tailwind install :
 https://tailwindcss.com/docs/guides/create-react-app
 
+
+react latest router dom install :
+npm i react-router-dom@6 --save 
+
