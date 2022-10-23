@@ -11,8 +11,10 @@ function Products() {
   
   return (
     <div>
+      <div className="">
       <Header setHidesidebar={setHidesidebar}/>
-      {hideSidebar}
+      </div>
+      {/* {hideSidebar} */}
       
       <div className="flex">
          
@@ -20,7 +22,7 @@ function Products() {
         <Sidebar hideSidebar={hideSidebar}/>
 
         <div className="">
-          {/* <ProductDetails /> */}
+          <ProductDetails />
         </div>
       </div>
     </div>
