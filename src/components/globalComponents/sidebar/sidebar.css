@@ -1,4 +1,4 @@
-/* .sidebar-animate {
+.sidebar-animate {
     transition: width 1s;
 }
 
@@ -9,4 +9,4 @@
     to {
         min-width: 300px;
     }
-} */
+}
