@@ -17,7 +17,7 @@ function Products() {
         <Header setHidesidebar={setHidesidebar} />
       </div>
       {/* {hideSidebar} */}
-      <div className=" desktop-cart flex content-end bg-black right-px">
+      <div className="shit flex content-end bg-black right-px">
         <DesktopCart />
       </div>
       <div className="flex">

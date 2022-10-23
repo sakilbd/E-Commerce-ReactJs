@@ -1,1 +1,9 @@
-.content-end {}
+.content-end {
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 10;
+    height: 100vh;
+    background: transparent;
+    border-radius: 10px;
+}
