@@ -22,7 +22,7 @@ function Products() {
         <Sidebar hideSidebar={hideSidebar}/>
 
         <div className="">
-          <ProductDetails />
+          {/* <ProductDetails /> */}
         </div>
       </div>
     </div>
