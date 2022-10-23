@@ -32,7 +32,7 @@ function ProductDetails() {
   }, []);
 
   return (
-    <div className="overflow-scroll h-screen ">
+    <div className="overflow-scroll h-screen p-2">
       <div
         style={loading ? { display: "none" } : { display: "block" }}
         className=""

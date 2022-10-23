@@ -4,3 +4,10 @@
     font-size: 35px;
     color: black;
 }
+
+.header-css {
+    height: 45px;
+    display: flex;
+    align-items: center;
+    padding: 6px;
+}

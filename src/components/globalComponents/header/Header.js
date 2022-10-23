@@ -4,7 +4,7 @@ import { GoThreeBars } from "react-icons/go";
 import { CgClose } from "react-icons/cg";
 import "./header.css";
 function Header({ setHidesidebar }) {
-  let [btnStatus, setButtonStatus] = useState(false);
+  let [btnStatus, setButtonStatus] = useState(true);
 
   const setValue = (value) => {
     setHidesidebar(value);
@@ -12,23 +12,24 @@ function Header({ setHidesidebar }) {
   };
 
   return (
-    <div className="h-min[30px] w-screen bg-slate-400 ">
+    <div className="header-css w-screen bg-slate-400">
+        
       <div className="lg:hidden">
         <button
           onClick={() => {
             setValue("block");
-            setButtonStatus(true);
+            setButtonStatus(false);
           }}
-          className={"collapse-btn"+ (btnStatus?" hidden":" block")}
+          className={"collapse-btn"+(btnStatus?" block":" hidden")}
         >
           <GoThreeBars />
         </button>
         <button
           onClick={() => {
             setValue("hidden");
-            setButtonStatus(false)
+            setButtonStatus(true)
           }}
-          className={"collapse-btn"+ (btnStatus?" block":" hidden")}
+          className={"collapse-btn"+ (btnStatus?" hidden":" block")}
         >
           <CgClose />
         </button>
