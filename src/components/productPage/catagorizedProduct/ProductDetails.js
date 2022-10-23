@@ -32,13 +32,13 @@ function ProductDetails() {
   }, []);
 
   return (
-    <div className="trending-container ">
+    <div className="overflow-scroll h-screen ">
       <div
         style={loading ? { display: "none" } : { display: "block" }}
         className=""
       >
-        Trending Products
-        <div onLoad={() => setLoading(false)} className="grid 2xl:grid-cols-6 xl:grid-cols-5 lg:grid-cols-4 sml:grid-cols-2 gap-2">
+       
+        <div onLoad={() => setLoading(false)} className="grid 2xl:grid-cols-6 xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-4 sm:grid-cols-4 sml:grid-cols-2 gap-2">
           {Object.keys(data).map((item, i) => {
             return (
              

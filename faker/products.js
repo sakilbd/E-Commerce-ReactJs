@@ -41,14 +41,14 @@ var array_of = function(times) {
 };
 
 // Will generate array of five random timestamps
-var data = array_of(10);
+var data = array_of(30);
 console.log(data)
     // fs.writeFile("./faker/db.json", JSON.stringify(data), function(err) {
     //     if (err) throw err;
     //     console.log('complete');
     // });
 
-fs.writeFile("./public/fakeData/trendingProducts.json", JSON.stringify(data), function(err) {
+fs.writeFile("./public/fakeData/products.json", JSON.stringify(data), function(err) {
     if (err) throw err;
     console.log('complete');
 });

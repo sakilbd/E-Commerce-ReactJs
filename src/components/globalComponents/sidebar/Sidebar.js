@@ -1,9 +1,12 @@
 import React from "react";
 
-function Sidebar() {
+function Sidebar({hideSidebar}) {
+ 
   return (
-    <div className="max-w-[350px]  h-screen bg-black">
-      <div className="flex border border-purple-200 rounded">
+    <div>
+     
+      <div className={"sml:hidden md:hidden sm:hidden lg:block min-w-[300px] h-screen bg-black"}>
+        {/* <div className="flex border border-purple-200 rounded">
         <input
           type="text"
           className="block w-full px-4 py-2 text-purple-700 bg-white border rounded-md focus:border-purple-400 focus:ring-purple-300 focus:outline-none focus:ring focus:ring-opacity-40"
@@ -12,6 +15,7 @@ function Sidebar() {
         <button className="px-4 text-white bg-purple-600 border-l rounded ">
           Search
         </button>
+      </div> */}
       </div>
     </div>
   );

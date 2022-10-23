@@ -16,7 +16,7 @@ function TrendingProducts() {
 
   useEffect(() => {
     axios
-      .get("/fakeData/products.json")
+      .get("/fakeData/trendingProducts.json")
       .then((response) => {
         // console.log(response.data);
         // setCatagory(response.data);
