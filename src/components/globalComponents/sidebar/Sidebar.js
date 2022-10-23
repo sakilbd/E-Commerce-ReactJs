@@ -5,7 +5,7 @@ function Sidebar({hideSidebar}) {
   return (
     <div>
      
-      <div className={"sml:hidden md:hidden sm:hidden lg:block min-w-[300px] h-screen bg-black"}>
+      <div className={`sml:${hideSidebar} md:${hideSidebar} sm:${hideSidebar} lg:block min-w-[300px] h-screen bg-black`}>
         {/* <div className="flex border border-purple-200 rounded">
         <input
           type="text"

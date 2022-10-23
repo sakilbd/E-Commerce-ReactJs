@@ -9,9 +9,9 @@ function Header({ setHidesidebar }) {
 
   return (
     <div>
-      <button onClick={() => setValue("false")}>click to Hide</button>
+      <button onClick={() => setValue("hidden")}>click to Hide</button>
       <br></br>
-      <button onClick={() => setValue("true")}>click to unhide</button>
+      <button onClick={() => setValue("block")}>click to unhide</button>
     </div>
   );
 }

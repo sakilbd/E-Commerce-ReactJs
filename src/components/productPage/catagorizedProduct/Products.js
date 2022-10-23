@@ -7,7 +7,7 @@ import ProductDetails from "./ProductDetails";
 function Products() {
   const { id } = useParams();
   const [open, setOpen] = useState(false);
-  const [hideSidebar, setHidesidebar] = useState(false);
+  const [hideSidebar, setHidesidebar] = useState("hidden");
   
   return (
     <div>
@@ -20,7 +20,7 @@ function Products() {
         <Sidebar hideSidebar={hideSidebar}/>
 
         <div className="">
-          <ProductDetails />
+          {/* <ProductDetails /> */}
         </div>
       </div>
     </div>
