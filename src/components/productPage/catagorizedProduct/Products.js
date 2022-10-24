@@ -5,7 +5,7 @@ import MobileCart from "../../globalComponents/cart/MobileCart";
 import Header from "../../globalComponents/header/Header";
 import Sidebar from "../../globalComponents/sidebar/Sidebar";
 import ProductDetails from "./ProductDetails";
-import './products.css';
+import "./products.css";
 
 function Products() {
   const { id } = useParams();
@@ -13,21 +13,20 @@ function Products() {
   const [hideSidebar, setHidesidebar] = useState("hidden");
 
   return (
-    <div>
-      <div className="">
-        <Header setHidesidebar={setHidesidebar} />
-      </div>
-      {/* {hideSidebar} */}
-      <DesktopCart/>
-      <div className="flex">
-        {/* { hideSidebar?'':<Sidebar />} */}
-        <Sidebar hideSidebar={hideSidebar} />
-
-        
+    
+      <div>
+        <div className="">
+          {/* <Header setHidesidebar={setHidesidebar} /> */}
+        </div>
+        {/* {hideSidebar} */}
+        {/* <DesktopCart/> */}
+        <div className="flex">
+          {/* { hideSidebar?'':<Sidebar />} */}
+          <Sidebar hideSidebar={hideSidebar} />
           <ProductDetails />
-       
+        </div>
       </div>
-    </div>
+   
   );
 }
 
