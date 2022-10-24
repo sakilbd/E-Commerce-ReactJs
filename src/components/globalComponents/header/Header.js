@@ -18,7 +18,7 @@ function Header({ setHidesidebar }) {
     <>
       <div className="header-css w-screen sticky bg-slate-400">
         <div className="lg:hidden">
-          {/* {cartInfo} */}
+          
           <button
             onClick={() => {
               setValue("block");
