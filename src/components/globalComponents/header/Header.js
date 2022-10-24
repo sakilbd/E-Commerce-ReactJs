@@ -1,10 +1,12 @@
-import React, { useState } from "react";
+import React, { useState,useContext } from "react";
 import Sidebar from "../sidebar/Sidebar";
 import { GoThreeBars } from "react-icons/go";
 import { CgClose } from "react-icons/cg";
 import "./header.css";
 import { Outlet } from "react-router-dom";
+import {CartContext}  from "../contexts/cartContext/CartContext";
 function Header({ setHidesidebar }) {
+  // const cartInfo = useContext(CartContext);
   let [btnStatus, setButtonStatus] = useState(true);
 
   const setValue = (value) => {
@@ -16,6 +18,7 @@ function Header({ setHidesidebar }) {
     <>
       <div className="header-css w-screen sticky bg-slate-400">
         <div className="lg:hidden">
+          {/* {cartInfo} */}
           <button
             onClick={() => {
               setValue("block");
