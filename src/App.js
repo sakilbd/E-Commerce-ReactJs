@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route, Router } from "react-router-dom";
 import DesktopCart from "./components/globalComponents/cart/DesktopCart";
 import Header from "./components/globalComponents/header/Header";
 import Sidebar from "./components/globalComponents/sidebar/Sidebar";
+import 'tw-elements';
 function App() {
   return (
     <>

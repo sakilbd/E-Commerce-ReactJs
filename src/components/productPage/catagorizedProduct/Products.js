@@ -7,26 +7,22 @@ import Sidebar from "../../globalComponents/sidebar/Sidebar";
 import ProductDetails from "./ProductDetails";
 import "./products.css";
 
+
 function Products() {
   const { id } = useParams();
   const [open, setOpen] = useState(false);
   const [hideSidebar, setHidesidebar] = useState("hidden");
 
   return (
-    
-      <div>
-        <div className="">
-          {/* <Header setHidesidebar={setHidesidebar} /> */}
-        </div>
-        {/* {hideSidebar} */}
-        {/* <DesktopCart/> */}
-        <div className="flex">
-          {/* { hideSidebar?'':<Sidebar />} */}
-          <Sidebar hideSidebar={hideSidebar} />
-          <ProductDetails />
-        </div>
+    <div>
+      
+      <div className=""></div>
+
+      <div className="flex">
+        <Sidebar hideSidebar={hideSidebar} />
+        <ProductDetails />
       </div>
-   
+    </div>
   );
 }
 

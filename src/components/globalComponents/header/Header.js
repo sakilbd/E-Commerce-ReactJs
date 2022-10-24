@@ -5,6 +5,7 @@ import { CgClose } from "react-icons/cg";
 import "./header.css";
 import { Outlet } from "react-router-dom";
 import {CartContext}  from "../contexts/cartContext/CartContext";
+import CartButton from "./cartButton/CartButton";
 function Header({ setHidesidebar }) {
   // const cartInfo = useContext(CartContext);
   let [btnStatus, setButtonStatus] = useState(true);
@@ -39,6 +40,7 @@ function Header({ setHidesidebar }) {
             <CgClose />
           </button>
         </div>
+        <CartButton/>
       </div>
       <Outlet />
     </>
