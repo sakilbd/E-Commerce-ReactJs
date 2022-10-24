@@ -8,7 +8,7 @@ import {CartContext}  from "../contexts/cartContext/CartContext";
 function Header({ setHidesidebar }) {
   // const cartInfo = useContext(CartContext);
   let [btnStatus, setButtonStatus] = useState(true);
-
+  const bullshit = useContext(CartContext);
   const setValue = (value) => {
     setHidesidebar(value);
     console.log(value);
@@ -17,6 +17,7 @@ function Header({ setHidesidebar }) {
   return (
     <>
       <div className="header-css w-screen sticky bg-slate-400">
+        {bullshit}
         <div className="lg:hidden">
           
           <button
