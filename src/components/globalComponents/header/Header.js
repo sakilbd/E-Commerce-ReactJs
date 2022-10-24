@@ -14,7 +14,7 @@ function Header({ setHidesidebar }) {
 
   return (
     <>
-      <div className="header-css w-screen bg-slate-400">
+      <div className="header-css w-screen sticky bg-slate-400">
         <div className="lg:hidden">
           <button
             onClick={() => {

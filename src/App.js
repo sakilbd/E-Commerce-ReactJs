@@ -13,11 +13,12 @@ function App() {
     <>
       
         <Routes>
-          <Route path="/" element={<LandingPage />} />
+          {/* <Route path="/" element={<LandingPage />} /> */}
           {/* <Route path="products/:id" element={<Products />}/> */}
-          <Route path="products" element={<Header />}>
+          <Route path="/" element={<Header />}>
+          <Route index element={<LandingPage />} />
             {/* <Route index element={<h3>Index </h3>} /> */}
-            <Route path=":id" element={<Products/>} />
+            <Route path="products/:id" element={<Products/>} />
           </Route>
           {/* <Route  path="products/:id" element={<Products />}/> */}
           <Route path="*" element={<h1>Route does not exist</h1>} />
