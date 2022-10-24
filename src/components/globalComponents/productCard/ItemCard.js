@@ -3,6 +3,7 @@ import "./itemCard.css";
 import StarRatings from "react-star-ratings";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
+import { useCartContext } from "../contexts/cartContext/CartContext";
 
 function ItemCard(props) {
   // console.log(props.data)
@@ -11,10 +12,12 @@ function ItemCard(props) {
   let [rating, setRating] = useState();
   let [count, setCount] = useState(0);
   const [showed, setShowed] = useState(true);
+  const getItem =useCartContext();
+  
   // console.log("shit");
   function incrementCount() {
     count = count + 1;
-
+   
     setCount(count);
   }
   function decrementCount() {
@@ -37,6 +40,7 @@ function ItemCard(props) {
         style={loading ? { display: "none" } : { display: "block" }}
         className="item-card-container"
       >
+        {getItem}
         <div className="image-container">
           <div className="badge">
             <span>-12%</span>
