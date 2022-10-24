@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import DesktopCart from "../../globalComponents/cart/DesktopCart";
+import MobileCart from "../../globalComponents/cart/MobileCart";
 import Header from "../../globalComponents/header/Header";
 import Sidebar from "../../globalComponents/sidebar/Sidebar";
 import ProductDetails from "./ProductDetails";
@@ -17,16 +18,14 @@ function Products() {
         <Header setHidesidebar={setHidesidebar} />
       </div>
       {/* {hideSidebar} */}
-      <div className="desktop-cart flex content-end fixed z-10 h-screen items-center   right-px ">
-        <DesktopCart />
-      </div>
+      <DesktopCart/>
       <div className="flex">
         {/* { hideSidebar?'':<Sidebar />} */}
         <Sidebar hideSidebar={hideSidebar} />
 
-        <div className="">
+        
           <ProductDetails />
-        </div>
+       
       </div>
     </div>
   );

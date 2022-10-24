@@ -8,3 +8,9 @@
     border-radius: 10px;
     background: red;
 } */
+
+.desktop-cart {
+    position: fixed;
+    top: 50%;
+    transform: translate(0, -50%);
+}
