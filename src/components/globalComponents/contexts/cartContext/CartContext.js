@@ -8,7 +8,7 @@ export function useCartContext() {
 }
 
 const CartProvider = ({ children }) => {
-  let [data, setdata] = useState("hurrah working");
+  let [data, setdata] = useState("hurrah ");
     
   const insertItem = (id) => {
     setdata(id);

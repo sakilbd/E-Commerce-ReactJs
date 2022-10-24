@@ -13,11 +13,11 @@ function ItemCard(props) {
   let [count, setCount] = useState(0);
   const [showed, setShowed] = useState(true);
   const getItem =useCartContext();
-  
+//  const [data,setdata] = useCartContext();
   // console.log("shit");
   function incrementCount() {
     count = count + 1;
-   
+    // setdata(count);
     setCount(count);
   }
   function decrementCount() {
