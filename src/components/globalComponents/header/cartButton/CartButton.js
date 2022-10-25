@@ -2,7 +2,7 @@ import React from "react";
 import "./cartbutton.css";
 import { FaShoppingCart } from "react-icons/fa";
 import { useCartContext } from "../../contexts/cartContext/CartContext";
-import CartItems from "./offCanvasCartItems/CartItems";
+import CartContainer from "./offCanvasCartItems/CartContainer";
 
 function CartButton() {
   let {itemCounts} = useCartContext();
@@ -47,7 +47,7 @@ function CartButton() {
           some Items man 
         </div>
       </div> */}
-      <CartItems/>
+      <CartContainer/>
     </div>
   );
 }

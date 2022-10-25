@@ -67,9 +67,9 @@ const CartProvider = ({ children }) => {
     });
     // console.log(cartItems);
   };
-
+  const cartItemsArray = [...cartItems];
   const itemCounts = cartItems.length;  //to get cart items list to be shown in navbar maybe!!!!
-  const value = { getItemQuantity, increaseCartQuantity,decreaseCartQuantity,removeFromCart,itemCounts };
+  const value = { getItemQuantity, increaseCartQuantity,decreaseCartQuantity,removeFromCart,itemCounts,cartItemsArray};
   return <CartContext.Provider value={value}>{children}</CartContext.Provider>;
 };
 
