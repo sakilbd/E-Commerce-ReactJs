@@ -26,7 +26,7 @@
 
 .image-container {
     /* position: absolute; */
-    /* position: relative; */
+    position: relative;
 }
 
 .rating {
