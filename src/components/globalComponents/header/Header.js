@@ -18,7 +18,7 @@ function Header({ setHidesidebar }) {
   return (
     <>
       <div className="header-css w-screen sticky bg-slate-400">
-        {bullshit}
+        {/* {bullshit} */}
         <div className="lg:hidden">
           
           <button

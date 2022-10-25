@@ -12,12 +12,13 @@ function ItemCard(props) {
   let [rating, setRating] = useState();
   let [count, setCount] = useState(0);
   const [showed, setShowed] = useState(true);
-  const getItem =useCartContext();
+  const data =useCartContext();
 //  const [data,setdata] = useCartContext();
   // console.log("shit");
   function incrementCount() {
     count = count + 1;
     // setdata(count);
+    data.insertItem(count)
     setCount(count);
   }
   function decrementCount() {
@@ -25,7 +26,7 @@ function ItemCard(props) {
     if (count == 0) {
       setShowed(true);
     }
-
+    data.insertItem(count)
     setCount(count);
   }
 
@@ -40,7 +41,7 @@ function ItemCard(props) {
         style={loading ? { display: "none" } : { display: "block" }}
         className="item-card-container"
       >
-        {getItem}
+        {data.data}
         <div className="image-container">
           <div className="badge">
             <span>-12%</span>

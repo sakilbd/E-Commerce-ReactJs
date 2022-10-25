@@ -8,16 +8,18 @@ export function useCartContext() {
 }
 
 const CartProvider = ({ children }) => {
-  let [data, setdata] = useState("hurrah ");
+  let [data, setdata] = useState(1);
     
   const insertItem = (id) => {
+   
     setdata(id);
   };
   const getItem = () => {
     return data;
   };
+  const value = {data,insertItem};
   return (
-    <CartContext.Provider value={data}>{children}</CartContext.Provider>
+    <CartContext.Provider value={value}>{children}</CartContext.Provider>
   );
 };
 
