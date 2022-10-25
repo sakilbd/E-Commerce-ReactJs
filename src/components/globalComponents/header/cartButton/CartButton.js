@@ -5,7 +5,7 @@ import { useCartContext } from "../../contexts/cartContext/CartContext";
 import CartItems from "./offCanvasCartItems/CartItems";
 
 function CartButton() {
-  let cartData = useCartContext();
+  let {itemCounts} = useCartContext();
   return (
     <div>
       <button
@@ -19,7 +19,7 @@ function CartButton() {
           <div>
             <FaShoppingCart />
           </div>
-          <div className="cart-amount-digit">{cartData.data?cartData.data:0}</div>
+          <div className="cart-amount-digit">{itemCounts>0?itemCounts:0}</div>
         </div>
       </button>
 

@@ -12,20 +12,20 @@ const CartProvider = ({ children }) => {
   let [cartItems, setCartItems] = useState([]);
 
   const insertItem = (id) => {
-    console.log(cartItems);
+    // console.log(cartItems);
     setCartItems([...cartItems, { id: id, quantity: id + 1 }]);
     // setdata(id);
   };
-  const getItem = () => {
-    // return data;
-  };
-
+ 
+  
+  
   const getItemQuantity = (id) => {
     // return id;
     return cartItems.find(item => item.id === id)?.quantity||0;
   };
   const increaseCartQuantity = (id) => {
     c("inside increaseCartQuantity");
+    console.log(cartItems.length);
     setCartItems((currItems) => {
       // c((currItems.find((item) => item.id == id))==null);
       if (currItems.find((item) => item.id == id)==null) {
@@ -40,7 +40,7 @@ const CartProvider = ({ children }) => {
         });
       }
     });
-    console.log(cartItems);
+    // console.log(cartItems);
   };
 
   const decreaseCartQuantity = (id) => {
@@ -65,9 +65,11 @@ const CartProvider = ({ children }) => {
     setCartItems((currItems) => {
      return currItems.filter(item=>item.id!=id);
     });
-    console.log(cartItems);
+    // console.log(cartItems);
   };
-  const value = { getItemQuantity, increaseCartQuantity,decreaseCartQuantity,removeFromCart };
+
+  const itemCounts = cartItems.length;  //to get cart items list to be shown in navbar maybe!!!!
+  const value = { getItemQuantity, increaseCartQuantity,decreaseCartQuantity,removeFromCart,itemCounts };
   return <CartContext.Provider value={value}>{children}</CartContext.Provider>;
 };
 

@@ -23,7 +23,10 @@ function CartItems() {
         ></button>
       </div>
       <div className="offcanvas-body flex-grow p-4 overflow-y-auto">
-        some Items man
+        <div className="h-32 w-full bg-black p-5"></div>
+        <div>
+
+        </div>
       </div>
     </div>
   );
