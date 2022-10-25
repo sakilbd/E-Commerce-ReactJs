@@ -12,6 +12,9 @@ tailwind install :
 https://tailwindcss.com/docs/guides/create-react-app
 
 
+casula fakeer documentations:
+https://github.com/boo1ean/casual
+
 react latest router dom install :
 npm i react-router-dom@6 --save 
 

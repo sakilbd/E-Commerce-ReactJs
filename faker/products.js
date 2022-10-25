@@ -19,7 +19,9 @@ var array_of = function(times) {
 
             ]
             let price = casual.integer(from = 20, to = 350);
+
             return {
+                id: i,
                 title: casual.words(n = 6),
                 image: "http://loremflickr.com/640/480/food",
                 rating: (casual.double(from = 3, to = 5)).toFixed(1),
@@ -41,7 +43,7 @@ var array_of = function(times) {
 };
 
 // Will generate array of five random timestamps
-var data = array_of(30);
+var data = array_of(50);
 console.log(data)
     // fs.writeFile("./faker/db.json", JSON.stringify(data), function(err) {
     //     if (err) throw err;

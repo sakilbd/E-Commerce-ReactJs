@@ -1,8 +1,11 @@
 import React from "react";
 import "./cartbutton.css";
 import { FaShoppingCart } from "react-icons/fa";
+import { useCartContext } from "../../contexts/cartContext/CartContext";
+import CartItems from "./offCanvasCartItems/CartItems";
 
 function CartButton() {
+  let cartData = useCartContext();
   return (
     <div>
       <button
@@ -16,11 +19,11 @@ function CartButton() {
           <div>
             <FaShoppingCart />
           </div>
-          <div className="cart-amount-digit">2</div>
+          <div className="cart-amount-digit">{cartData.data?cartData.data:0}</div>
         </div>
       </button>
 
-      <div
+      {/* <div
         className="offcanvas offcanvas-end fixed bottom-0 flex flex-col max-w-full bg-white invisible bg-clip-padding shadow-sm outline-none transition duration-300 ease-in-out text-gray-700 top-0 right-0 border-none w-96"
         tabindex="-1"
         id="offcanvasRight"
@@ -31,7 +34,7 @@ function CartButton() {
             className="offcanvas-title mb-0 leading-normal font-semibold"
             id="offcanvasRightLabel"
           >
-            Offcanvas right
+            Cart
           </h5>
           <button
             type="button"
@@ -40,8 +43,11 @@ function CartButton() {
             aria-label="Close"
           ></button>
         </div>
-        <div className="offcanvas-body flex-grow p-4 overflow-y-auto">...</div>
-      </div>
+        <div className="offcanvas-body flex-grow p-4 overflow-y-auto">
+          some Items man 
+        </div>
+      </div> */}
+      <CartItems/>
     </div>
   );
 }
