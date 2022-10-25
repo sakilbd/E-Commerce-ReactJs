@@ -1,17 +1,23 @@
 import React from "react";
 import "./cartbutton.css";
+import { FaShoppingCart } from "react-icons/fa";
 
 function CartButton() {
   return (
     <div>
-     <button
-        className="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg  focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out mr-1.5"
+      <button
+        className="cart-button inline-block px-3 py-2.5 bg-red-100 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-white hover:shadow-lg focus:bg-white focus:shadow-lg  focus:outline-none focus:ring-0 active:bg-white active:shadow-lg transition duration-150 ease-in-out mr-1.5"
         type="button"
         data-bs-toggle="offcanvas"
         data-bs-target="#offcanvasRight"
         aria-controls="offcanvasRight"
       >
-        Toggle right offcanvas
+        <div className="cart-icon flex gap-1 ">
+          <div>
+            <FaShoppingCart />
+          </div>
+          <div className="cart-amount-digit">2</div>
+        </div>
       </button>
 
       <div
@@ -35,7 +41,7 @@ function CartButton() {
           ></button>
         </div>
         <div className="offcanvas-body flex-grow p-4 overflow-y-auto">...</div>
-      </div> 
+      </div>
     </div>
   );
 }

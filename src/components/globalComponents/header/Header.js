@@ -1,10 +1,10 @@
-import React, { useState,useContext } from "react";
+import React, { useState, useContext } from "react";
 import Sidebar from "../sidebar/Sidebar";
 import { GoThreeBars } from "react-icons/go";
 import { CgClose } from "react-icons/cg";
 import "./header.css";
 import { Outlet } from "react-router-dom";
-import {CartContext}  from "../contexts/cartContext/CartContext";
+import { CartContext } from "../contexts/cartContext/CartContext";
 import CartButton from "./cartButton/CartButton";
 function Header({ setHidesidebar }) {
   // const cartInfo = useContext(CartContext);
@@ -20,7 +20,6 @@ function Header({ setHidesidebar }) {
       <div className="header-css w-screen sticky bg-slate-400">
         {/* {bullshit} */}
         <div className="lg:hidden">
-          
           <button
             onClick={() => {
               setValue("block");
@@ -40,7 +39,9 @@ function Header({ setHidesidebar }) {
             <CgClose />
           </button>
         </div>
-        <CartButton/>
+        <div className="absolute right-5 w-16">
+          <CartButton />
+        </div>
       </div>
       <Outlet />
     </>

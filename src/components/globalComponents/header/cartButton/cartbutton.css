@@ -1,3 +1,12 @@
-.z-index {
-    /* z-index: 9999999999999999999; */
+.cart-button {
+    border-radius: 20px;
+}
+
+.cart-icon {
+    color: rgb(9, 8, 8);
+}
+
+.cart-amount-digit {
+    /* background: red; */
+    margin-top: -2px;
 }
