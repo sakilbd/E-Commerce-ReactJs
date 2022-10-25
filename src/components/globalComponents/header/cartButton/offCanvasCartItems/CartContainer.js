@@ -1,9 +1,11 @@
 import React from "react";
 import { useCartContext } from "../../../contexts/cartContext/CartContext";
 import CartItems from "./CartItems";
+import './offCanvasStyles.css';
+import { NumericFormat } from 'react-number-format';
 
 function CartContainer() {
-  const { cartItemsArray } = useCartContext();
+  const { cartItemsArray, itemCounts } = useCartContext();
 
   cartItemsArray.map((item) => {});
 
@@ -29,13 +31,27 @@ function CartContainer() {
         ></button>
       </div>
       <div className="offcanvas-body flex-grow p-4 overflow-y-auto">
-        {cartItemsArray.map((item) => {
-          return (
-            <div className="h-32 w-full bg-black p-5">
-              <CartItems />
-            </div>
-          );
-        })}
+        <div className="flex flex-col gap-2 ">
+          {cartItemsArray.map((item) => {
+            return (
+              <div className="h-20 w-full bg-black rounded-lg p-3">
+                <CartItems />
+              </div>
+            );
+          })}
+        </div>
+      </div>
+      <div className="offcanvas-body  pl-4 pr-4 pt-2 pb-2 bottom-0">
+        <div className="h-14 w-full bg-orange-300 flex gap-10 items-center rounded-lg p-3 ">
+          <div>
+            <span className="text-base font-bold"> {itemCounts} </span>{" "}
+            <span className="font-semibold text-lg "> &nbsp;items</span>
+          </div>
+          <div>
+            <span className="text-base font-bold">Total</span><span className="text-base font-bold">&nbsp; <NumericFormat value={10000} displayType={'text'} thousandSeparator={true} prefix={''} />
+</span><span className="taka-icon "> &nbsp;৳ </span>
+          </div>
+        </div>
       </div>
     </div>
   );
