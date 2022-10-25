@@ -9,7 +9,7 @@ export function useCartContext() {
 
 const CartProvider = ({ children }) => {
   const c = console.log.bind(console);
-  let [cartItems, setCartItems] = useState([{ id: -1, quantity: -1 }]);
+  let [cartItems, setCartItems] = useState([]);
 
   const insertItem = (id) => {
     console.log(cartItems);
@@ -22,20 +22,14 @@ const CartProvider = ({ children }) => {
 
   const getItemQuantity = (id) => {
     // return id;
-    return cartItems.find((item) => {
-      c(item);
-      if(item.id ==id){
-        return item.id;
-      }
-      return item.id === id?.quantity || 0;
-    });
+    return cartItems.find(item => item.id === id)?.quantity||0;
   };
   const increaseCartQuantity = (id) => {
     c("inside increaseCartQuantity");
     setCartItems((currItems) => {
-      c(currItems.find((item) => item.id == id) == null);
-      if ((currItems.find((item) => item.id == id) == null) == true) {
-        return [...currItems, { id: id, quantity: 1 }];
+      // c((currItems.find((item) => item.id == id))==null);
+      if (currItems.find((item) => item.id == id)==null) {
+        return [...currItems, { id:id, quantity: 1 }];
       } else {
         return currItems.map((item) => {
           if (item.id == id) {
@@ -49,7 +43,31 @@ const CartProvider = ({ children }) => {
     console.log(cartItems);
   };
 
-  const value = { getItemQuantity, increaseCartQuantity, insertItem };
+  const decreaseCartQuantity = (id) => {
+   
+    setCartItems((currItems) => {
+      // c((currItems.find((item) => item.id == id))==null);
+      if (currItems.find((item) => item.id == id)?.quantity===1) { 
+        return currItems.filter(item=>item.id!==id);
+      } else {
+        return currItems.map((item) => {
+          if (item.id == id) {
+            return { ...item, quantity: item.quantity - 1 };
+          } else {
+            return item;
+          }
+        });
+      }
+    });
+    
+  };
+  const removeFromCart = (id) => { 
+    setCartItems((currItems) => {
+     return currItems.filter(item=>item.id!=id);
+    });
+    console.log(cartItems);
+  };
+  const value = { getItemQuantity, increaseCartQuantity,decreaseCartQuantity,removeFromCart };
   return <CartContext.Provider value={value}>{children}</CartContext.Provider>;
 };
 

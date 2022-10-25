@@ -13,7 +13,7 @@ function ItemCard(props) {
   let [rating, setRating] = useState();
   let [count, setCount] = useState(0);
   const [showed, setShowed] = useState(true);
-  const { getItemQuantity, increaseCartQuantity, insertItem } =
+  const { getItemQuantity,increaseCartQuantity,decreaseCartQuantity } =
     useCartContext();
   useEffect(() => {
     setRating(parseFloat(props.data.rating));
@@ -24,8 +24,8 @@ function ItemCard(props) {
     count = count + 1;
     // setdata(count);
     increaseCartQuantity(itemData.id);
-    let log = getItemQuantity(itemData.id);
-    console.log("LOG :"+JSON.stringify(log) );
+    // let log = getItemQuantity(itemData.id);
+    // console.log("LOG :"+JSON.stringify(log) );
     setCount(count);
   }
   function decrementCount() {
@@ -34,6 +34,7 @@ function ItemCard(props) {
       setShowed(true);
     }
     // data.insertItem(count)
+    decreaseCartQuantity(itemData.id);
     setCount(count);
   }
 
@@ -42,7 +43,7 @@ function ItemCard(props) {
       style={loading ? { display: "none" } : { display: "block" }}
       className="item-card-container"
     >
-      {}
+      {getItemQuantity(itemData.id)}
       <div className="image-container">
         <div className="badge">
           <span>-12%</span>
