@@ -43,7 +43,7 @@ function ItemCard(props) {
       style={loading ? { display: "none" } : { display: "block" }}
       className="item-card-container"
     >
-      {getItemQuantity(itemData.id)}
+      {/* {getItemQuantity(itemData.id)} */}
       <div className="image-container">
         <div className="badge">
           <span>-12%</span>
