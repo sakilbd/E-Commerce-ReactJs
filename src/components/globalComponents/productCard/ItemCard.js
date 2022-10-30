@@ -13,11 +13,17 @@ function ItemCard(props) {
   let [rating, setRating] = useState();
   let [count, setCount] = useState(0);
   const [showed, setShowed] = useState(true);
+  const [discountPercent, setdiscountPercent] = useState();
   const { getItemQuantity, increaseCartQuantity, decreaseCartQuantity } =
     useCartContext();
   useEffect(() => {
     setRating(parseFloat(props.data.rating));
     setItemData(props.data);
+    if(props.data.discounted_price !=""){
+      const percentage= (((props.data.price-props.data.discounted_price)/props.data.price)*100).toFixed(1);
+      setdiscountPercent(percentage);
+    }
+
   }, [props.data]);
 
   function incrementCount() {
@@ -46,7 +52,10 @@ function ItemCard(props) {
       {/* {getItemQuantity(itemData.id)} */}
       <div className="image-container">
         <div className="badge">
-          <span>-12%</span>
+          {
+            discountPercent? <span>-{discountPercent}</span>:''
+          }
+         
         </div>
         <img onLoad={() => setLoading(false)} src={itemData.image}></img>
 
