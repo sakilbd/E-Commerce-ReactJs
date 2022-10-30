@@ -9,13 +9,13 @@ function CatagoryCard(props) {
   });
   let [catPhoto, setCatPhoto] = useState();
   useEffect(() => {
-    setCatagoryName({ name: props.object.name, image: props.object.image });
+    console.log(props.object.image);
+    setCatagoryName({ name: props.object.child_catagory_title, image: props.object.image});
     // setCatPhoto(props.object.image);
   }, [props.object]);
 
   return (
     <div class="catagory-content">
-     
         <img src={catagoryName.image} alt=""></img>
         {catagoryName.name}
       

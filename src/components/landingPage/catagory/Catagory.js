@@ -4,14 +4,20 @@ import axios from "axios";
 import CatagoryCard from "./CatagoryCard";
 import { Link } from "react-router-dom";
 
+
 function Catagory() {
   const c = console.log.bind(console);
 
   let [catagory, setCatagory] = useState({});
-
+  
   useEffect(() => {
+   
+    const apiUrl = process.env.REACT_APP_CHILD_CATAGORY_APP_URL;
+    const endpoint = "products/get-child-catagory"
+
+    console.log(apiUrl);
     axios
-      .get("https://634d1ec9f5d2cc648e9cf4b1.mockapi.io/api/catagory/products")
+      .get("http://localhost:3000/api/products/get-child-catagory")
       .then((response) => {
         c(response.data);
         setCatagory(response.data);

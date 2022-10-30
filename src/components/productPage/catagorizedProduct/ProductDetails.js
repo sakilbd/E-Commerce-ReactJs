@@ -17,7 +17,8 @@ function ProductDetails() {
 
   useEffect(() => {
     axios
-      .get("/fakeData/products.json")
+      // .get("/fakeData/products.json")
+      .get("")
       .then((response) => {
         // console.log(response.data);
         // setCatagory(response.data);
