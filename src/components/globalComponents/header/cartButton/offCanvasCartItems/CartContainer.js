@@ -1,8 +1,8 @@
 import React from "react";
 import { useCartContext } from "../../../contexts/cartContext/CartContext";
 import CartItems from "./CartItems";
-import './offCanvasStyles.css';
-import { NumericFormat } from 'react-number-format';
+import "./offCanvasStyles.css";
+import { NumericFormat } from "react-number-format";
 
 function CartContainer() {
   const { cartItemsArray, itemCounts } = useCartContext();
@@ -48,8 +48,17 @@ function CartContainer() {
             <span className="font-semibold text-lg "> &nbsp;items</span>
           </div>
           <div>
-            <span className="text-base font-bold">Total</span><span className="text-base font-bold">&nbsp; <NumericFormat value={10000} displayType={'text'} thousandSeparator={true} prefix={''} />
-</span><span className="taka-icon "> &nbsp;৳ </span>
+            <span className="text-base font-bold">Total</span>
+            <span className="text-base font-bold">
+              &nbsp;{" "}
+              <NumericFormat
+                value={10000}
+                displayType={"text"}
+                thousandSeparator={true}
+                prefix={""}
+              />
+            </span>
+            <span className="taka-icon "> &nbsp;৳ </span>
           </div>
         </div>
       </div>

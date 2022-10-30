@@ -14,3 +14,9 @@
     top: 50%;
     transform: translate(0, -50%); */
 }
+
+.product-height {
+    display: flex;
+    flex-flow: column;
+    height: 100vh;
+}

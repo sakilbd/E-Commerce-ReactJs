@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState,useRef } from "react";
 
 import axios from "axios";
 // import "./trending_products.css";
@@ -9,6 +9,9 @@ function ProductDetails() {
   let [data, setData] = useState({});
   let [loading, setLoading] = useState(true);
   const { id } = useParams();
+
+  const [height, setHeight] = useState(0);
+  const elementRef = useRef(null);
   
   // useEffect(() => {
   //   fetch("/fakeData/products.json")
@@ -17,6 +20,10 @@ function ProductDetails() {
   //       console.log(text);
   //     });
   // }, []);
+
+   useEffect(() => {
+    setHeight(elementRef.current.clientHeight);
+  }, []); 
 
   useEffect(() => {
     axios
@@ -36,7 +43,9 @@ function ProductDetails() {
   }, []);
 
   return (
-    <div className="overflow-scroll h-screen  p-2">
+   
+    <div  ref={elementRef} className="product-height overflow-scroll  p-10">
+      {height}
       <div
         style={loading ? { display: "none" } : { display: "block" }}
         className=""
