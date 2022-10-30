@@ -50,7 +50,7 @@ function ItemCard(props) {
         </div>
         <img
           onLoad={() => setLoading(false)}
-          src="http://loremflickr.com/640/480/food"
+          src={itemData.image}
         ></img>
 
         {/* <LazyLoadImage
@@ -63,7 +63,7 @@ function ItemCard(props) {
       </div>
 
       <div className="max-h-[50px] min-h-[50px] sml:max-h-[40px] sml:min-h-[40px]  overflow-scroll">
-        <h6 className="mt-1 sml:text-sm "> {itemData.title}</h6>
+        <h6 className="mt-1 sml:text-sm "> {itemData.product_title}</h6>
       </div>
       <div className="rating">
         <StarRatings

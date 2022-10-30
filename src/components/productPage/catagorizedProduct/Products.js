@@ -9,9 +9,11 @@ import "./products.css";
 
 
 function Products() {
-  const { id } = useParams();
+  // const { id } = useParams();
+  // console.log(id);
   const [open, setOpen] = useState(false);
   const [hideSidebar, setHidesidebar] = useState("hidden");
+  
 
   return (
     <div>

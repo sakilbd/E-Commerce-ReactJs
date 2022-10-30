@@ -3,10 +3,13 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 // import "./trending_products.css";
 import ItemCard from "../../globalComponents/productCard/ItemCard";
+import { useParams } from "react-router-dom";
 
 function ProductDetails() {
   let [data, setData] = useState({});
   let [loading, setLoading] = useState(true);
+  const { id } = useParams();
+  
   // useEffect(() => {
   //   fetch("/fakeData/products.json")
   //     .then((r) => r.text())
@@ -18,7 +21,7 @@ function ProductDetails() {
   useEffect(() => {
     axios
       // .get("/fakeData/products.json")
-      .get("")
+      .get(`http://127.0.0.1:3000/api/products/get-by-catagory/${id}`)
       .then((response) => {
         // console.log(response.data);
         // setCatagory(response.data);
