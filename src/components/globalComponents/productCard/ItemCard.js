@@ -13,7 +13,7 @@ function ItemCard(props) {
   let [rating, setRating] = useState();
   let [count, setCount] = useState(0);
   const [showed, setShowed] = useState(true);
-  const { getItemQuantity,increaseCartQuantity,decreaseCartQuantity } =
+  const { getItemQuantity, increaseCartQuantity, decreaseCartQuantity } =
     useCartContext();
   useEffect(() => {
     setRating(parseFloat(props.data.rating));
@@ -48,10 +48,7 @@ function ItemCard(props) {
         <div className="badge">
           <span>-12%</span>
         </div>
-        <img
-          onLoad={() => setLoading(false)}
-          src={itemData.image}
-        ></img>
+        <img onLoad={() => setLoading(false)} src={itemData.image}></img>
 
         {/* <LazyLoadImage
             alt={"FUCKSHIT"}
@@ -83,9 +80,12 @@ function ItemCard(props) {
         <div>
           ৳ <span className="price ">{itemData.price}</span>
         </div>
-        <div className="previous-price ">
-          ৳ <span className="price">{itemData.last_price}</span>
-        </div>
+        {
+          itemData.discounted_price !=""?(<div className="previous-price ">
+          ৳ <span className="price">{itemData.discounted_price}</span>
+        </div>):''
+          
+        }
       </div>
       <button
         onClick={(e) => {
