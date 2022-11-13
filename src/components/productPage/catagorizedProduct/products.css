@@ -18,5 +18,5 @@
 .product-height {
     display: flex;
     flex-flow: column;
-    height: 100vh;
+    height: calc(100vh - 5vh);
 }
