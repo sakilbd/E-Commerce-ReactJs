@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 
 import { GoThreeBars } from "react-icons/go";
 import { CgClose } from "react-icons/cg";
@@ -15,42 +15,49 @@ function Header({ setHidesidebar }) {
     setHidesidebar(value);
     console.log(value);
   };
+  useEffect(() => {
+    const sidebar = document.querySelector(".sidebar");
+    const mainContent = document.querySelector(".main-content");
+    document.querySelector("#header-button").onclick = function () {
+      sidebar.classList.toggle("sidebar_small");
+      mainContent.classList.toggle("main-content_large");
+    };
+  }, []);
 
   return (
     <>
-      <div className="header-css w-screen sticky bg-slate-400">
-        {/* {bullshit} */}
-        {/* <div className="lg:hidden"> */}
-        <div className="">
-
-          <button
-          data-bs-toggle="offcanvas"
-          data-bs-target="#offcanvasExample"
-          aria-controls="offcanvasExample"
-            onClick={() => {
-              setValue("block");
-              setButtonStatus(false);
-            }}
-            className={"collapse-btn" + (btnStatus ? " block" : " hidden")}
-          >
-            <GoThreeBars />
-          </button>
-          <button
-            onClick={() => {
-              setValue("hidden");
-              setButtonStatus(true);
-            }}
-            className={"collapse-btn" + (btnStatus ? " hidden" : " block")}
-          >
-            <CgClose />
-          </button>
+      <div className="grid-container">
+        <nav className="sidebar ">
+          {/* <button className="header-button">M</button> */}
+          <button>wow nice man</button>
+        </nav>
+        <div className="main-content">
+          <header className="header-css sticky bg-slate-400">
+            <div className="">
+              <button id="header-button">
+                <GoThreeBars />
+              </button>
+              <button
+                onClick={() => {
+                  setValue("hidden");
+                  setButtonStatus(true);
+                }}
+                className={"collapse-btn" + (btnStatus ? " hidden" : " block")}
+              >
+                <CgClose />
+              </button>
+            </div>
+           
+            <div className="absolute right-5 w-16">
+              <CartButton />
+            </div>
+          </header>
+          <main className="">
+            <Outlet />
+          </main>
         </div>
-        <Sidebar/>
-        <div className="absolute right-5 w-16">
-          <CartButton />
-        </div>
+        
       </div>
-      <Outlet />
     </>
   );
 }
