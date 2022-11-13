@@ -27,11 +27,11 @@ function Header({ setHidesidebar }) {
   return (
     <>
       <div className="grid-container">
-        <nav className="sidebar ">
+        <nav className="sidebar md:w-screen">
           {/* <button className="header-button">M</button> */}
-          <button>wow nice man</button>
+          <button >wow nice man</button>
         </nav>
-        <div className="main-content">
+        <div className="main-content md:w-0">
           <header className="header-css sticky bg-slate-400">
             <div className="">
               <button id="header-button">
@@ -53,7 +53,7 @@ function Header({ setHidesidebar }) {
             </div>
           </header>
           <main className="">
-            <Outlet />
+            {/* <Outlet /> */}
           </main>
         </div>
         

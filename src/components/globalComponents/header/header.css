@@ -1,3 +1,7 @@
+:root {
+    --header-height: 5%;
+}
+
 .collapse-btn {
     border: 1px solid black;
     border-radius: 3px;
@@ -6,7 +10,7 @@
 }
 
 .header-css {
-    height: 6%;
+    height: var(--header-height);
     display: flex;
     align-items: center;
     padding: 6px;
@@ -58,4 +62,26 @@
     top: 2rem;
     transform: translateX(-50%);
     cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+    .sidebar {
+        width: 50%;
+        height: 100%;
+        transition: .5s ease;
+        background: red;
+        position: fixed;
+    }
+    .main-content {
+        width: 100%;
+        background-color: #ccc;
+        position: absolute;
+    }
+    .main-content_large {
+        width: 100%;
+        transition: .2s ease;
+    }
+    .sidebar_small {
+        width: 0%;
+    }
 }
